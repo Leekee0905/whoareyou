@@ -68,7 +68,7 @@ ul, li { list-style: none; }
 .team-info .tit-area .title { font-size: 24px; font-weight: 900; } 
 .team-info .tit-area p { font-size: 20px; font-weight: 300; } 
 .team-info .txt-area { margin: 80px 0 0 0; display: flex; justify-content: space-between; align-items: center; } 
-#section .team-info .txt-area li { width: 15%; min-height: 400px; padding:20px; border-radius: 8px; box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43); display: flex; flex-direction: column; } 
+.team-info .txt-area li { width: 15%; min-height: 400px; padding:20px; border-radius: 8px; box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43); display: flex; flex-direction: column; } 
 .team-info .txt-area li .tit { text-align: left; font-size:24px; font-weight: 700; } 
 .team-info .txt-area li .tit span { font-size: 16px; font-weight: 900; } 
 .team-info .txt-area li .txt { margin-top:30px; font-weight: 400; } 
@@ -120,7 +120,7 @@ ul, li { list-style: none; }
 
 /* mobile */
 .mobile #header, .mobile #section, .mobile #footer { padding:0 20px; } 
-.mobile #section > div { min-height: auto; padding:100px 0; } 
+.mobile #section > div { min-height: auto; padding:40px 0; } 
 
 .mobile #header .date-area, .mobile #footer .date-area { height: 50px; } 
 .mobile #header .date-area > * , .mobile #footer .date-area > * { font-size: 14px; } 
@@ -136,9 +136,6 @@ ul, li { list-style: none; }
 .mobile .team-promise .info-area .card-area .card i { margin-top: 0; font-size: 25px; } 
 .mobile .team-promise .info-area .card-area .card .txt { font-size: 15px; } 
 
-.mobile .team-photo .member-area{ margin-top: 30px; }
-.mobile .team-photo .member-area li .img-area { width: 80%; height: 150px; }
-.mobile .team-photo .member-area li .img-area img{ height: 150px; }
 .mobile .team-photo .member-area li { min-height: auto; } 
 .mobile .team-photo .member-area li .img-area { width: 80%; height: 150px; }
 .mobile .team-photo .member-area li .img-area img{ height: 100%; }
