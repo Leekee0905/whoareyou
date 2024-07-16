@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); * { font-family:"Noto Sans KR", sans-serif; font-optical-sizing:auto; font-style:normal; margin:0; padding:0; box-sizing:border-box; } 
 
 * { box-sizing: border-box; } 
-html, body { height: 100%; position: relative; } 
+html, body { height: 100%; position: relative; scroll-behavior: smooth; } 
 a { text-decoration: none; color: #000; } 
 ul, li { list-style: none; } 
 
