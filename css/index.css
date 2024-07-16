@@ -135,7 +135,7 @@ ul, li { list-style: none; }
 .mobile .team-promise .info-area .card-area .card i { margin-top: 0; font-size: 25px; } 
 .mobile .team-promise .info-area .card-area .card .txt { font-size: 15px; } 
 
-.mobile .team-photo .member-area { margin: ; }
+.mobile .team-photo .member-area { }
 .mobile .team-photo .member-area li { min-height: auto; } 
 .mobile .team-photo .member-area li .img-area { width: 80%; height: 150px; }
 .mobile .team-photo .member-area li .img-area img{ height: 100%; }
