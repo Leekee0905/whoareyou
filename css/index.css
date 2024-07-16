@@ -32,6 +32,7 @@ ul, li { list-style: none; }
 
 /* section */
 #section { width: 100%; display: block; padding: 0 120px; } 
+#section { width: 100%; display: block; padding: 0 120px; } 
 #section > div { min-height: 100vh; border-bottom: 1px dashed #000; } 
 
 .team-purpose { display: flex; flex-direction: column; justify-content: center; } 
@@ -119,14 +120,14 @@ ul, li { list-style: none; }
 
 /* mobile */
 .mobile #header, .mobile #section, .mobile #footer { padding:0 20px; } 
-.mobile #section > div { min-height: auto; padding:40px 0; } 
+.mobile #section > div { min-height: auto; padding:100px 0; } 
 
 .mobile #header .date-area, .mobile #footer .date-area { height: 50px; } 
 .mobile #header .date-area > * , .mobile #footer .date-area > * { font-size: 14px; } 
-
 .mobile #header .tit-area { background-size: 80px 80px; background-position: 100% 90%; } 
 .mobile #header .tit-area > .mbti-info { margin-top:20px; } 
 
+.mobile .team-purpose .tit-area{ margin-top:30px; }
 .mobile .team-purpose .tit-area p{ font-size:16px; column-count: 1; column-gap: 0; }
 
 .mobile .team-promise .info-area .card-area { flex-flow: wrap; justify-content: space-around; gap : 0; } 
@@ -135,6 +136,9 @@ ul, li { list-style: none; }
 .mobile .team-promise .info-area .card-area .card i { margin-top: 0; font-size: 25px; } 
 .mobile .team-promise .info-area .card-area .card .txt { font-size: 15px; } 
 
+.mobile .team-photo .member-area{ margin-top: 30px; }
+.mobile .team-photo .member-area li .img-area { width: 80%; height: 150px; }
+.mobile .team-photo .member-area li .img-area img{ height: 150px; }
 .mobile .team-photo .member-area li { min-height: auto; } 
 .mobile .team-photo .member-area li .img-area { width: 80%; height: 150px; }
 .mobile .team-photo .member-area li .img-area img{ height: 100%; }
