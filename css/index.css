@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); * { font-family:"Noto Sans KR", sans-serif; font-optical-sizing:auto; font-style:normal; margin:0; padding:0; box-sizing:border-box; } 
 
 * { box-sizing: border-box; } 
-html, body { height: 100%; position: relative; scroll-behavior: smooth; } 
+html, body { height: 100%; position: relative; } 
 a { text-decoration: none; color: #000; } 
 ul, li { list-style: none; } 
 
@@ -90,5 +90,3 @@ ul, li { list-style: none; }
 #section .members-info{ height: 100%; }
 #section .members-info ul li .img-area { width:200px; height: 200px; }
 #section .members-info ul li .img-area img { width:100%; object-fit: cover; }
-
-

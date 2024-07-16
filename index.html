@@ -3,25 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>누구세요?</title>
+    <title>TEAM PROJECT 01</title>
 
     <!-- S : CSS -->
-    <link rel="stylesheet" href="index.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+
     <!--// E : CSS -->
+
+    <!-- S : JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/firebase.js" type="module"></script>
+    <!--// E : JS -->
   </head>
+
   <body>
-    <header><h1>누구세요?</h1></header>
-    <div id="team-info"></div>
-    <div id="photo-cards">
-      <div id = "poto1">
-
-      </div>
-      <div onclick="goToScroll('members-info1')" id = "poto2">
-
-      </div>
-      <div id = "poto3">
-
-      </div>
+    <div id="wrap">
+      <header id="header">
+        <div class="date-area">
+          <h1>TEAM PROJECT 01</h1>
+          <p>20240715 - 20240719</p>
+        </div>
 
         <div class="tit-area">
           <p>
@@ -200,14 +209,15 @@
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름을 눌르면 링크로?</a>
+              <a href="#sec01;">조원 이름을 눌르면 링크로?</a>
+              
               <p>ISTP</p>
             </li>
             <li>
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름</a>
+              <a href="sec02;">조원 이름</a>
               <p>ISTP</p>
             </li>
             <li>
@@ -268,10 +278,10 @@
             </ul>
           </div>
         </div>
-        <div class="members-info"></div>
-        <div class="members-info"></div>
-        <div class="members-info"></div>
-        <div class="members-info"></div>
+        <div class="members-info" id="sec01"></div>
+        <div class="members-info" id="sec02"></div>
+        <div class="members-info" id="c"></div>
+        <div class="members-info" id="d"></div>
         <div></div>
       </section>
 
@@ -317,23 +327,10 @@
       </div> -->
       <!-- CRUD -->
     </div>
-    <div class="members-info1"><br>
-
-
-    </div>
-    <div class="members-info2"></div>
-    <div class="members-info3"></div>
-    <div class="members-info4"></div>
-    <div class="members-info5"></div>
-    <div>최원장.</div>
 
     <!-- S : JS -->
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/crud.js" type="module"></script>
     <!--// E : JS -->
   </body>
 </html>
-
-
-
-
-
