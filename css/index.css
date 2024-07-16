@@ -88,4 +88,7 @@ ul, li { list-style: none; }
 #section .team-photo .member-area li a { margin-top: 30px; font-weight: 500; } 
 
 #section .members-info{ height: 100%; }
+#section .members-info ul li .img-area { width:200px; height: 200px; }
+#section .members-info ul li .img-area img { width:100%; object-fit: cover; }
+
 
