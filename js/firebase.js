@@ -1,5 +1,10 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
-
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import {
+  collection,
+  addDoc,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyDyWg0bbKGCU47h4knahtz5KXmtYBrWENs",
   authDomain: "iiiii-76d96.firebaseapp.com",
@@ -11,3 +16,9 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const data = await getDocs(collection(db, "IIIII"));
+data.forEach((e) => {
+  let row = e.data();
+  console.log(row);
+});
