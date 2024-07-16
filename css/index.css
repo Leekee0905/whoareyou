@@ -27,8 +27,8 @@ ul, li { list-style: none; }
 #header .tit-area > .mbti-info p { display: inline; } 
 #header .tit-area > .mbti-info p span { margin-left: 10px; font-weight: 900; } 
 
-#section { width: 100%; height: 100%;  padding: 0 120px; } 
-#section > div{ border-bottom: 1px dashed #000; }
+#section { border:2px solid red; width: 100%; /* height: 100%; */ display: block; padding: 0 120px; } 
+#section > div { min-height: 919px; border-bottom: 1px dashed #000; } 
 
 #section .team-purpose { height: 100%; display: flex; flex-direction: column; justify-content: center; } 
 #section .team-purpose .img-area { display: flex; gap: 20px; } 
@@ -66,16 +66,16 @@ ul, li { list-style: none; }
 #section .team-info .tit-area .title { font-size: 24px; font-weight: 900; } 
 #section .team-info .tit-area p { font-size: 20px; font-weight: 300; } 
 
-#section .team-info .txt-area { margin: 80px 0 0 0 ;  display: flex; justify-content: space-between; align-items: center; } 
+#section .team-info .txt-area { margin: 80px 0 0 0; display: flex; justify-content: space-between; align-items: center; } 
 #section .team-info .txt-area li { width: 15%; min-height: 400px; padding:20px; border-radius: 8px; box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43); display: flex; flex-direction: column; } 
-#section .team-info .txt-area li .tit{ text-align: left; font-size:24px; font-weight: 700; }
-#section .team-info .txt-area li .tit span{ font-size: 16px; font-weight: 900; }
-#section .team-info .txt-area li .txt{ margin-top:30px; font-weight: 400; }
+#section .team-info .txt-area li .tit { text-align: left; font-size:24px; font-weight: 700; } 
+#section .team-info .txt-area li .tit span { font-size: 16px; font-weight: 900; } 
+#section .team-info .txt-area li .txt { margin-top:30px; font-weight: 400; } 
 #section .team-info .txt-area li .img-area { width: 70%; height: 280px; border-radius: 10%; overflow: hidden; box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43); box-sizing: border-box; } 
 #section .team-info .txt-area li .img-area img { width: 100%; height: 300px; object-fit: cover; } 
 #section .team-info .txt-area li a { margin-top: 30px; font-weight: 500; } 
 
-#section .team-photo{ height: 100%; }
+#section .team-photo { height: 100%; } 
 #section .team-photo { height: 100%; display: flex; flex-direction: column; justify-content: center; } 
 #section .team-photo .tit-area { color: #191919; } 
 #section .team-photo .tit-area .title { font-size: 24px; font-weight: 900; } 
@@ -87,8 +87,13 @@ ul, li { list-style: none; }
 #section .team-photo .member-area li .img-area img { width: 100%; height: 300px; object-fit: cover; } 
 #section .team-photo .member-area li a { margin-top: 30px; font-weight: 500; } 
 
-#section .members-info{ height: 100%; }
-#section .members-info ul li .img-area { width:200px; height: 200px; }
-#section .members-info ul li .img-area img { width:100%; object-fit: cover; }
+#section .members-info { height: 100%; } 
+#section .members-info ul li .img-area { width:200px; height: 200px; } 
+#section .members-info ul li .img-area img { width:100%; object-fit: cover; } 
 
+#footer { padding: 0 120px; background-color: #000; } 
+#footer .date-area { width: 100%; height: 100px; display: flex; justify-content: space-between; align-items: center; } 
+#footer .date-area > * { font-size: 20px; font-weight: 400; color: #FFF; } 
 
+#btn-top { cursor: pointer; opacity: 0; width: 40px; height: 40px; color: #fff; background-color: #000; position: fixed; bottom: 40px; right: 40px; border: 0; border-radius: 50%; font: bold 20px monospace; transition: opacity 0.5s, transform 0.5s; } 
+#btn-top.show { opacity: 1; transition: opacity 1s, transform 1s; } 
