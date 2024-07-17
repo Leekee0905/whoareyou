@@ -1,21 +1,21 @@
 .comment-title {
-    font-size : 20px;
-    margin-left : 10px;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 .comment-text > input {
-    padding: 40px 300px;
-    margin-top: 10px;
-    font-size: 20px;
+  padding: 40px 300px;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .comment-text > button {
-    padding: 10px 15px;
-    margin-top: 20px;
-    background-color: black;
-    color: white;
+  padding: 10px 15px;
+  margin-top: 20px;
+  background-color: black;
+  color: white;
 }
 
 .comment-list {
-    margin: 20px 0;
+  margin: 20px 0;
 }

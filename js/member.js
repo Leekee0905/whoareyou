@@ -24,15 +24,26 @@ const data = await getDocs(collection(db, "IIIII"));
 data.forEach((e) => {
   row = e.data();
 });
-console.log(row);
 
+const temp_li_HTML = row.members.map((ele, index) => {
+  return `<li>
+  <div href="javacsript:void(0)" class="img-area">
+    <img class="me${index}" alt="" />
+  </div>
+  <a id="" href="javacsript:void(0)" onclick="goToScroll('#info${index}')"
+    >${ele.name}</a
+  >
+  <p><span class="color-green">#</span>${ele.mbti}</p>
+  </li>`;
+});
+$(".member-area").append(temp_li_HTML);
 const memberContainers = document.querySelectorAll(".members-container");
 
 const memberHTML = row.members
   .map((member, index) => {
     return `<div class="members-info" id="info${index}">
     <div class="info-area">
-      <img id="me${index}" />
+      <img class="me${index}" />
       <div class="info-container">
         <div class="intro-area">
           <div class="member-infolist "><span>이름 : ${member.name}</span></div>
@@ -53,5 +64,3 @@ const memberHTML = row.members
 memberContainers.forEach((container) => {
   container.innerHTML = memberHTML;
 });
-
-// <div>Member ${index + 1}: ${member.name}</div>
