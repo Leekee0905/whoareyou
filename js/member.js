@@ -25,6 +25,18 @@ data.forEach((e) => {
   row = e.data();
 });
 
+const temp_li_HTML = row.members.map((ele, index) => {
+  return `<li>
+  <div href="javacsript:void(0)" class="img-area">
+    <img class="me${index}" alt="" />
+  </div>
+  <a id="" href="javacsript:void(0)" onclick="goToScroll('#info${index}')"
+    >${ele.name}</a
+  >
+  <p><span class="color-green">#</span>${ele.mbti}</p>
+  </li>`;
+});
+$(".member-area").append(temp_li_HTML);
 const memberContainers = document.querySelectorAll(".members-container");
 
 const memberHTML = row.members
