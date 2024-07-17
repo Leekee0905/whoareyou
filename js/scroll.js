@@ -1,5 +1,6 @@
 'use script';
 
-function goToScroll(name) {
-    let location = document.querySelector("#" + name).offsetTop;
-    window.scrollTo({top: location - 0, behavior: 'smooth'}) };
+function goToScroll(id) {
+    let location = document.querySelector(id).offsetTop;
+    window.scrollTo({ top: location - 0, behavior: "smooth" });
+    }
