@@ -19,9 +19,9 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 $("#postingbtn").click(async function () {
-  let name = $("#comment-name").val();
-  let comment = $("#comment-text-input").val();
-  let doc = {
+  const name = $("#comment-name").val();
+  const comment = $("#comment-text-input").val();
+  const doc = {
     comments: { name: name, comment: comment },
   };
   await addDoc(collection(db, "comments"), doc);
@@ -29,13 +29,12 @@ $("#postingbtn").click(async function () {
   window.location.reload();
 });
 
-let docs = await getDocs(collection(db, "comments"));
+const docs = await getDocs(collection(db, "comments"));
 docs.forEach((data) => {
-  let row = data.data().comments;
-  console.log(row);
-  let name = row["name"];
-  let comment = row["comment"];
-  let temp_html = `
+  const row = data.data().comments;
+  const name = row["name"];
+  const comment = row["comment"];
+  const temp_html = `
      <div class="card" style="width: 18rem">
         <div class="card-body">
           <h5 class="card-title">${name}</h5>
