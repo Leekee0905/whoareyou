@@ -1,4 +1,4 @@
-'use script';
+"use script";
 
 // Top 버튼
 const scrollTop = function () {
@@ -15,7 +15,7 @@ const scrollTop = function () {
   };
 
   window.addEventListener("scroll", scrollBtnDisplay);
-  
+
   const scrollWindow = function () {
     if (window.scrollY != 0) {
       setTimeout(function () {
@@ -30,19 +30,20 @@ const scrollTop = function () {
 
 scrollTop();
 
-// 반응형 대응 
-const wrap = document.querySelector('#wrap');
-const mediaQueryString = '(max-width: 1040px)'; 
-const mediaQueryList = window.matchMedia(mediaQueryString); 
+// 반응형 대응
+const wrap = document.querySelector("#wrap");
+const mediaQueryString = "(max-width: 1040px)";
+const mediaQueryList = window.matchMedia(mediaQueryString);
 
-function handleMediaChange(viewport) { 
-  if (!viewport.matches) wrap.className ='desktop';
-  if (viewport.matches) wrap.className ='tablet';
-  if (window.matchMedia("(max-width: 768px)").matches) wrap.className ='mobile';
+function handleMediaChange(viewport) {
+  if (!viewport.matches) wrap.className = "desktop";
+  if (viewport.matches) wrap.className = "tablet";
+  if (window.matchMedia("(max-width: 768px)").matches)
+    wrap.className = "mobile";
 }
 
-mediaQueryList.addListener(handleMediaChange); 
+mediaQueryList.addListener(handleMediaChange);
 
-window.addEventListener('resize', function() { 
-    handleMediaChange(mediaQueryList);
+window.addEventListener("resize", function () {
+  handleMediaChange(mediaQueryList);
 });
