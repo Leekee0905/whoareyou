@@ -31,12 +31,12 @@ data.forEach((e) => {
   });
 });
 
-function getImages(imagesName, idx) {
-  getDownloadURL(ref(storage, `${imagesName}`)).then((url) => {
+async function getImages(imagesName, idx) {
+  await getDownloadURL(ref(storage, `${imagesName}`)).then((url) => {
     const xhr = new XMLHttpRequest();
     xhr.reponseType = "blob";
     xhr.open("GET", url);
     xhr.send();
-    $(`#me${idx}`).attr("src", url);
+    $(`.me${idx}`).attr("src", url);
   });
 }
