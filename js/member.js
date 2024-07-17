@@ -26,18 +26,18 @@ data.forEach((e) => {
 });
 
 const temp_li_HTML = row.members.map((ele, index) => {
-  return `<li>
-  <div href="javacsript:void(0)" class="img-area">
-    <img class="me${index}" alt="" />
-  </div>
-  <a id="" href="javacsript:void(0)" onclick="goToScroll('#info${index}')"
-    >${ele.name}</a
-  >
-  <p><span class="color-green">#</span>${ele.mbti}</p>
+  return `
+  <li>
+    <div class="img-area">
+      <img class="me${index}" alt="" />
+    </div>
+    <span class="txt" onclick="goToScroll('#info${index}')"
+      >${ele.name}</span
+    >
+    <p><span class="color-green">#</span>${ele.mbti}</p>
   </li>`;
 });
 $(".member-area").append(temp_li_HTML);
-const memberContainers = document.querySelectorAll(".members-container");
 
 const memberHTML = row.members
   .map((member, index) => {
@@ -61,6 +61,4 @@ const memberHTML = row.members
   })
   .join("");
 
-memberContainers.forEach((container) => {
-  container.innerHTML = memberHTML;
-});
+$(".members-container").append(memberHTML);
