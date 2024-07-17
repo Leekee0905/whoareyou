@@ -165,8 +165,31 @@ li {
 #section .team-purpose .tit-area p {
   font-size: 20px;
   font-weight: 300;
-  column-count: 2;
-  column-gap: 40px;
+}
+
+#section .team-purpose .purpose-box {
+  display: flex;
+}
+#section .team-purpose .purpose-box .purpose-right {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+#section .team-purpose .purpose-box .purpose-right p {
+  padding-bottom: 30px;
+  color: #2c8d6f;
+  font-size: 24px;
+  font-weight: 800;
+}
+#section .team-purpose .purpose-box .purpose-right .txt {
+  color: #191919;
+  font-size: 20px;
+  font-size: 44px;
+  font-weight: 800;
 }
 
 #section .team-promise {
