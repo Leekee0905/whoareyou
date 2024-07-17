@@ -1,8 +1,5 @@
 'use script';
 
-document.querySelector('.menu').addEventListener('click',e=>{
-    if(e.target.nodeName === 'LI'){
-      let id_value = e.target.dataset.link;
-      document.querySelector(id_value).scrollIntoView({behavior : 'smooth'});
-    }
-  });
+function goToScroll(name) {
+    let location = document.querySelector("." + name).offsetTop;
+    window.scrollTo({top: location - 0, behavior: 'smooth'}) };
