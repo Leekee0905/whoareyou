@@ -30,12 +30,12 @@ const memberContainers = document.querySelectorAll(".members-container");
 
 const memberHTML = row.members
   .map((member, index) => {
-    return `<div class="members-info">
+    return `<div class="members-info" id="info${index}">
     <div class="info-area">
       <img id="me${index}" />
       <div class="info-container">
         <div class="intro-area">
-          <div class="member-infolist"><span>이름 : ${member.name}</span></div>
+          <div class="member-infolist "><span>이름 : ${member.name}</span></div>
           <div class="member-infolist"><span>MBTI : ${member.mbti}</span></div>
           <div class="member-infolist"><span>TMI : ${member.tmi}</span></div>
           <div class="member-infolist"><span>장점 : ${member.advantages}</span></div>
