@@ -165,6 +165,22 @@ li {
   column-count: 2;
   column-gap: 40px;
 }
+
+.purpose-box {
+  display: flex;
+}
+
+.purpose-box .purpose-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.purpose-box .purpose-right p {
+  font-size: 44px;
+  font-weight: 900;
+}
+
 .team-promise {
   display: flex;
   flex-direction: column;
