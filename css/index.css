@@ -406,7 +406,10 @@ li {
 .members-info .members-otherinfo {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
+}
+.members-info .members-otherinfo span {
+  font-size: 20px;
 }
 /* .members-info .tit-area { color: #191919; }
 .members-info .tit-area .title { font-size: 24px; font-weight: 900; }

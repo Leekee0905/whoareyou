@@ -43,8 +43,8 @@ const memberHTML = row.members
       </div>
     </div>
     <div class="members-otherinfo">
-      <span><a href="${member.github}">깃허브링크</a></span>
-      <span><a href="${member.blog}">블로그링크</a></span>
+      <span>깃허브링크 : <a href="${member.github}">${member.github}</a></span>
+      <span>블로그링크 : <a href="${member.blog}">${member.blog}</a></span>
     </div>
   </div>`;
   })
