@@ -1,5 +1,5 @@
-/* FONT */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
 * {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
@@ -16,6 +16,7 @@ html,
 body {
   height: 100%;
   position: relative;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -39,10 +40,13 @@ li {
   color: rgb(187, 187, 115);
 }
 
+/* wrap*/
 #wrap {
   width: 100%;
   height: 100%;
 }
+
+/* header */
 #header {
   width: 100%;
   height: 100%;
@@ -55,7 +59,7 @@ li {
       rgba(0, 0, 0, 0.549) 0%,
       rgb(0, 0, 0) 100%
     ),
-    url(bg2.jpg);
+    url(../img/bg.jpg);
   background-blend-mode: multiply;
 }
 #header .date-area {
