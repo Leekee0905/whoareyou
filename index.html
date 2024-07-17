@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEAM PROJECT 01</title>
 
-    <!-- S : CSS -->
-    <link
+      <!-- S : CSS -->
+      <link
+     
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+     
       rel="stylesheet"
+   
     />
-    <link rel="stylesheet" href="./css/index.css" />
+      <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/comment.css" />
 
     <!--// E : CSS -->
@@ -63,32 +66,44 @@
             <div><img src="./img/3.jpg" alt="" /></div>
             <div><img src="./img/2.jpg" alt="" /></div>
           </div>
-
-          <div class="tit-area">
-            <div class="title">
-              01 <span class="color-green">.</span> team purpose (팀 목표)
+          <div class="purpose-box">
+            <div class="tit-area">
+              <div class="title">
+                01 <span class="color-green">.</span> Team Purpose (팀 목표)
+              </div>
+              <div class="purpose">
+                <p>최종적인 목표 : 2024년 07월 19일 20:00시 프로젝트 완성</p>
+                <br />
+                <p>숨겨진 목표 :2024년 07월 19일 20:00시까지 친해지기</p>
+                <br />
+                <h3>팀원 들의 개인 목표</h3>
+                <br />
+                <ul>
+                  <li>선채훈: jquery와 firebase를 통한 팀원 소개란 작성</li>
+                  <br />
+                  <li>이기성: firebase 연동 및 초기 셋팅과 팀 목표란 작성</li>
+                  <br />
+                  <li>
+                    송진우: 팀원 카드 작성 및 카드 클릭 시 해당 팀원 소개란
+                    스크롤 이동 구현
+                  </li>
+                  <br />
+                  <li>설하영: jquery와 firebase를 통한 댓글란 CRUD 구현</li>
+                  <br />
+                  <li>
+                    최유나: TOP 버튼 구현, UI/UX, 팀 약속란 작성, 모바일 대응
+                  </li>
+                  <br />
+                </ul>
+              </div>
             </div>
-            <div class="purpose">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                atque, dolorem harum corrupti modi, asperiores impedit, quidem
-                neque voluptas obcaecati vel veniam ratione nisi illo laborum
-                ipsum laudantium totam provident! Fugit, fuga. Voluptate ratione
-                deserunt a dolorem illum exercitationem id quae sequi,
-                perferendis, libero voluptatum possimus aut magni nihil eveniet
-                iure itaque culpa repellendus quod. Laudantium quasi eligendi
-                veritatis obcaecati. Libero quam labore, esse omnis numquam eum
-                expedita similique consequuntur dolor, exercitationem fugit,
-                voluptas vel nemo quia! Minus quidem distinctio hic quasi,
-                tenetur error quam, ipsa consequatur corrupti eveniet eum.
-                Numquam quam similique cumque perferendis voluptates eveniet!
-                Natus tenetur ab architecto maiores voluptatibus eos labore
-                fugit distinctio quos excepturi porro corporis itaque error
-                illum necessitatibus in, magnam eius quia aperiam!
-              </p>
+            <div class="purpose-right">
+              <p class="tit color-green">팀 좌우명</p>
+              <p class="txt">기간 내에 완수하자.</p>
             </div>
           </div>
         </div>
+      </header>
 
         <div class="team-promise">
           <div class="tit-area">
@@ -96,6 +111,7 @@
               02 <span class="color-green">.</span> our promise (팀 약속)
             </div>
           </div>
+        </div>
 
           <div class="info-area">
             <div class="card-area">
@@ -133,18 +149,10 @@
 
             <div class="txt-area">
               <ul>
-                <li class="tit">제목제목제목제목제목제목제목</li>
-                <li>예쁜 말투 쓰기 & 친해지기</li>
-                <li>도중에 포기하지 않고 끝까지 수료하기</li>
-                <li>
-                  도중에 포기하지 않고 끝까지 수료하기 blabla blabla blabla
-                  blabla
-                </li>
-                <li>예쁜 말투 쓰기 & 친해지기 blabla blabla blabla blabla</li>
-                <li>
-                  도중에 포기하지 않고 끝까지 수료하기 blabla blabla blabla
-                  blabla
-                </li>
+                <li class="tit">첫 번째 프로젝트 진행 주의사항</li>
+                <li>다 같이 취업 하기 위해 끝까지 포기하지 말고 힘내요.</li>
+                <li>바로 바로 질문을 통해 모르는 것을 알아가요.</li>
+                <li>서로 친절하게 알려주기로 약속 ~</li>
               </ul>
             </div>
           </div>
@@ -207,7 +215,7 @@
         <div id="photo-cards" class="team-photo">
           <div class="tit-area">
             <div class="title">
-              04 <span class="color-green">.</span> team photo (팀 소개)
+              03 <span class="color-green">.</span> team photo (팀 소개)
             </div>
           </div>
 
@@ -216,41 +224,42 @@
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름을 눌르면 링크로?</a>
-              <p>ISTP</p>
+              <a href="#info0">조원 이름을 눌르면 링크로?</a>
+              <p><span class="color-green">#</span>ISTP</p>
             </li>
             <li>
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름</a>
-              <p>ISTP</p>
+              <a href="#info1">조원 이름</a>
+              <p><span class="color-green">#</span>ISTP</p>
             </li>
             <li>
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름</a>
-              <p>ISTP</p>
+              <a href="#info2">조원 이름</a>
+              <p><span class="color-green">#</span>ISTP</p>
             </li>
             <li>
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름</a>
-              <p>ISTP</p>
+              <a href="#info3">조원 이름</a>
+              <p><span class="color-green">#</span>ISTP</p>
             </li>
             <li>
               <div class="img-area">
                 <img src="./img/1.jpg" alt="" />
               </div>
-              <a href="javascript:void(0);">조원 이름</a>
-              <p>ISTP</p>
+              <a href="#info4">조원 이름</a>
+              <p><span class="color-green">#</span>ISTP</p>
             </li>
           </ul>
         </div>
 
-        <div class="members-info">
+        <div class="members-container">
+          <!-- <div class="members-info">
           <div class="tit-area">
             <div class="title">
               05 <span class="color-green">.</span> team intro (팀원 소개)
@@ -315,6 +324,28 @@
           <div class="comment-list">
             <span>댓글 목록</span>
             <div class="card" style="width: 18rem">
+        </div>
+          <div class="members-info" id="info0"></div>
+          <div class="members-info" id="info1"></div>
+          <div class="members-info" id="info2"></div>
+          <div class="members-info" id="info3"></div>
+          <div class="members-info" id="info4"></div>
+        </div>
+        <div></div>
+      </section>
+
+      <footer id="footer">
+        <div class="date-area">
+          <h1>TEAM PROJECT 01</h1>
+          <p>20240715 - 20240719</p>
+        </div>
+      </footer>
+
+      <!-- CRUD -->
+      <!-- <div class="container p-4">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
               <div class="card-body">
                 <h5 class="card-title">name</h5>
                 <p class="card-text">comment context</p>
@@ -331,15 +362,19 @@
         </div>
       </footer>
     </div>
+    
+      </div> -->
+      <!-- CRUD -->
     <script
-      src="https://kit.fontawesome.com/a979b0acc8.js"
-      crossorigin="anonymous"
-    ></script>
+    src="https://kit.fontawesome.com/a979b0acc8.js"
+    crossorigin="anonymous"
+  ></script>
     <!-- S : JS -->
     <script src="./js/top.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/crud.js" type="module"></script>
     <script src="./js/comment.js"></script>
+    <script src="./js/member.js" type="module"></script>
     <!--// E : JS -->
   </body>
 </html>
