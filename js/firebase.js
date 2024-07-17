@@ -40,3 +40,4 @@ async function getImages(imagesName, idx) {
     $(`.me${idx}`).attr("src", url);
   });
 }
+export default db;
