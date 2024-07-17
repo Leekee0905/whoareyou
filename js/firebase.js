@@ -35,9 +35,6 @@ function getImages(imagesName, idx) {
   getDownloadURL(ref(storage, `${imagesName}`)).then((url) => {
     const xhr = new XMLHttpRequest();
     xhr.reponseType = "blob";
-    xhr.onload = (event) => {
-      const blob = xhr.response;
-    };
     xhr.open("GET", url);
     xhr.send();
     $(`#me${idx}`).attr("src", url);
