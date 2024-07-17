@@ -20,9 +20,9 @@ const firebaseConfig = {
   measurementId: "G-KCDYCN38NP",
 };
 
-export const app = initializeApp(firebaseConfig);
-const storage = getStorage();
+const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const storage = getStorage();
 const data = await getDocs(collection(db, "IIIII"));
 data.forEach((e) => {
   let row = e.data().members;
@@ -31,8 +31,8 @@ data.forEach((e) => {
   });
 });
 
-async function getImages(imagesName, idx) {
-  await getDownloadURL(ref(storage, `${imagesName}`)).then((url) => {
+function getImages(imagesName, idx) {
+  getDownloadURL(ref(storage, `${imagesName}`)).then((url) => {
     const xhr = new XMLHttpRequest();
     xhr.reponseType = "blob";
     xhr.onload = (event) => {
@@ -41,8 +41,5 @@ async function getImages(imagesName, idx) {
     xhr.open("GET", url);
     xhr.send();
     $(`#me${idx}`).attr("src", url);
-
-    // const img = document.getElementById(`me${idx}`);
-    // img.setAttribute("src", url);
   });
 }
