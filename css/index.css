@@ -18,7 +18,12 @@ body {
 a {
   text-decoration: none;
   color: #000;
+  cursor: pointer;
 }
+a:hover {
+  color: rgb(238, 238, 91);
+}
+
 ul,
 li {
   list-style: none;
