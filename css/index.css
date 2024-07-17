@@ -8,6 +8,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 * {
   box-sizing: border-box;
@@ -25,7 +34,35 @@ ul,
 li {
   list-style: none;
 }
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+ul,
+li {
+  list-style: none;
+}
 
+.color-green {
+  color: #2c8d6f;
+}
+.color-red {
+  color: rgb(135, 66, 66);
+}
+.color-blue {
+  color: rgb(70, 210, 228);
+}
+.color-yellow {
+  color: rgb(187, 187, 115);
+}
 .color-green {
   color: #2c8d6f;
 }
@@ -71,6 +108,28 @@ li {
   color: #fff;
 }
 
+#header .tit-area {
+  height: calc(100% - 30vh);
+  font-size: 80px;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-image: url('data:image/svg+xml; utf8, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="rgba(255,255,255,1)"><path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z"></path></svg>');
+  background-size: 150px 150px;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+#header .tit-area > p {
+  font-size: 2vh;
+  font-weight: 300;
+}
+#header .tit-area > p > span {
+  font-size: 3vh;
+  font-weight: 500;
+}
 #header .tit-area {
   height: calc(100% - 30vh);
   font-size: 80px;
