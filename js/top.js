@@ -19,7 +19,7 @@ const scrollTop = function () {
   const scrollWindow = function () {
     if (window.scrollY != 0) {
       setTimeout(function () {
-        window.scrollTo(0, window.scrollY - 50);
+        scrollTop = 0;
         scrollWindow();
       }, 10);
     }
