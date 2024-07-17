@@ -86,12 +86,18 @@ ul, li { list-style: none; }
 .team-photo .member-area li .img-area img { width: 100%; height: 300px; object-fit: cover; } 
 .team-photo .member-area li a { margin-top: 30px; font-weight: 500; } 
 
-.members-info { display: flex; flex-direction: column; justify-content: center; } 
-.members-info .tit-area { color: #191919; } 
+.members-info { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; border-bottom: 1px dashed #000; gap: 100px; } 
+.members-info .info-area { display: flex; height: 100%; width: 100%; justify-content: center; gap: 25%; }
+.members-info .info-area img { width: 300px; }
+.members-info .info-area .info-container { display: flex; }
+.members-info .info-area .intro-area { display: flex; flex-direction: column; justify-content: center; width: 550px; gap: 15px; }
+.members-info .info-area .intro-area .member-infolist span { font-size: 20px; }
+.members-info .members-otherinfo { display: flex; justify-content: center; gap: 10px; }
+/* .members-info .tit-area { color: #191919; } 
 .members-info .tit-area .title { font-size: 24px; font-weight: 900; } 
 .members-info .tit-area p { font-size: 20px; font-weight: 300; } 
 .members-info ul li .img-area { width:200px; height: 200px; } 
-.members-info ul li .img-area img { width:100%; object-fit: cover; } 
+.members-info ul li .img-area img { width:100%; object-fit: cover; }  */
 
 /* footer */
 #footer { padding: 0 120px; background-color: #000; } 
