@@ -2,8 +2,9 @@
 
 * { font-family:"Noto Sans KR", sans-serif; font-optical-sizing: auto; font-style: normal; margin: 0; padding: 0; box-sizing: border-box; } 
 
-html, body { height: 100%; position: relative; } 
-a { text-decoration: none; color: #000; } 
+* { box-sizing: border-box; } 
+html, body { height: 100%; position: relative; scroll-behavior: smooth; } 
+a { text-decoration: none; color: #000;  } 
 ul, li { list-style: none; } 
 
 .color-green { color: #2c8d6f; } 
