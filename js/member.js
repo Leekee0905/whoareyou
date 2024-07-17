@@ -24,7 +24,6 @@ const data = await getDocs(collection(db, "IIIII"));
 data.forEach((e) => {
   row = e.data();
 });
-console.log(row);
 
 const memberContainers = document.querySelectorAll(".members-container");
 
@@ -53,5 +52,3 @@ const memberHTML = row.members
 memberContainers.forEach((container) => {
   container.innerHTML = memberHTML;
 });
-
-// <div>Member ${index + 1}: ${member.name}</div>
