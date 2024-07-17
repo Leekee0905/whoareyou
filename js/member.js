@@ -41,8 +41,8 @@ const memberHTML = row.members.map((member, index) => {
       </div>
     </div>
     <div class="members-otherinfo">
-      <span>깃허브링크</span>
-      <span>블로그링크</span>
+      <span>깃허브링크 : <a href="${member.github}">${member.github}</a></span>
+      <span>블로그링크 : <a href="${member.blog}">${member.blog}</a></span>
     </div>
   </div>`);
 }).join("");
