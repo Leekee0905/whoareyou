@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-
 * {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
@@ -8,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -26,7 +24,6 @@ ul,
 li {
   list-style: none;
 }
-
 .color-green {
   color: #2c8d6f;
 }
@@ -39,13 +36,11 @@ li {
 .color-yellow {
   color: rgb(187, 187, 115);
 }
-
 /* wrap*/
 #wrap {
   width: 100%;
   height: 100%;
 }
-
 /* header */
 #header {
   width: 100%;
@@ -74,7 +69,6 @@ li {
   font-weight: 400;
   color: #fff;
 }
-
 #header .tit-area {
   height: calc(100% - 30vh);
   font-size: 80px;
@@ -97,7 +91,6 @@ li {
   font-size: 3vh;
   font-weight: 500;
 }
-
 #header .tit-area > h2 {
   position: relative;
   font-size: 10vh;
@@ -108,7 +101,6 @@ li {
   display: inline-block;
   transform: rotate(-10deg);
 }
-
 #header .tit-area > .mbti-info {
   margin-top: 5px;
   font-size: 3vh;
@@ -121,100 +113,75 @@ li {
   margin-left: 10px;
   font-weight: 900;
 }
-
+/* section */
 #section {
-  border: 2px solid red;
-  width: 100%; /* height: 100%; */
+  width: 100%;
+  display: block;
+  padding: 0 120px;
+}
+#section {
+  width: 100%;
   display: block;
   padding: 0 120px;
 }
 #section > div {
-  min-height: 919px;
+  min-height: 100vh;
   border-bottom: 1px dashed #000;
 }
-
-#section .team-purpose {
-  height: 100%;
+.team-purpose {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#section .team-purpose .img-area {
+.team-purpose .img-area {
   display: flex;
   gap: 20px;
 }
-#section .team-purpose .img-area > div {
+.team-purpose .img-area > div {
   width: 100px;
   height: 100px;
   overflow: hidden;
 }
-#section .team-purpose .img-area > div img {
+.team-purpose .img-area > div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#section .team-purpose .img-area > div:nth-of-type(even) {
+.team-purpose .img-area > div:nth-of-type(even) {
   margin-top: 30px;
 }
-
-#section .team-purpose .tit-area {
+.team-purpose .tit-area {
   margin-top: 80px;
   color: #191919;
 }
-#section .team-purpose .tit-area .title {
+.team-purpose .tit-area .title {
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 900;
 }
-#section .team-purpose .tit-area p {
+.team-purpose .tit-area p {
   font-size: 20px;
   font-weight: 300;
+  column-count: 2;
+  column-gap: 40px;
 }
-
-#section .team-purpose .purpose-box {
-  display: flex;
-}
-#section .team-purpose .purpose-box .purpose-right {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-#section .team-purpose .purpose-box .purpose-right p {
-  padding-bottom: 30px;
-  color: #2c8d6f;
-  font-size: 24px;
-  font-weight: 800;
-}
-#section .team-purpose .purpose-box .purpose-right .txt {
-  color: #191919;
-  font-size: 20px;
-  font-size: 44px;
-  font-weight: 800;
-}
-
-#section .team-promise {
-  height: 100%;
+.team-promise {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#section .team-promise .tit-area {
+.team-promise .tit-area {
   color: #191919;
 }
-#section .team-promise .tit-area .title {
+.team-promise .tit-area .title {
   font-size: 24px;
   font-weight: 900;
 }
-#section .team-promise .tit-area p {
+.team-promise .tit-area p {
   font-size: 20px;
   font-weight: 300;
 }
-
-#section .team-promise .info-area {
+.team-promise .info-area {
   width: 100%;
   min-height: 400px;
   margin-top: 80px;
@@ -222,93 +189,89 @@ li {
   justify-content: space-between;
   gap: 100px;
 }
-#section .team-promise .info-area .card-area {
+.team-promise .info-area .card-area {
   width: 50%;
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
-#section .team-promise .info-area .card-area .card {
+.team-promise .info-area .card-area .card {
   width: 30%;
   height: 280px;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43);
 }
-#section .team-promise .info-area .card-area .card i {
+.team-promise .info-area .card-area .card i {
   margin-top: 20px;
   display: block;
   font-size: 40px;
 }
-#section .team-promise .info-area .card-area .card .tit {
+.team-promise .info-area .card-area .card .tit {
   margin-top: 60px;
   font-size: 14px;
   font-weight: 900;
   text-align: right;
 }
-#section .team-promise .info-area .card-area .card .txt {
+.team-promise .info-area .card-area .card .txt {
   margin-top: 10px;
   font-size: 16px;
   font-weight: 300;
   text-align: right;
 }
-#section .team-promise .info-area .card-area .card:nth-child(1) {
+.team-promise .info-area .card-area .card:nth-child(1) {
   margin-top: -20px;
 }
-#section .team-promise .info-area .card-area .card:nth-child(2) {
+.team-promise .info-area .card-area .card:nth-child(2) {
   margin-top: 20px;
 }
-#section .team-promise .info-area .card-area .card:nth-child(3) {
+.team-promise .info-area .card-area .card:nth-child(3) {
   margin-top: 0;
 }
-#section .team-promise .info-area .card-area .card:nth-child(4) {
+.team-promise .info-area .card-area .card:nth-child(4) {
   margin-top: 60px;
 }
-
-#section .team-promise .txt-area {
+.team-promise .txt-area {
   width: 35%;
   margin-top: -20px;
 }
-#section .team-promise .txt-area ul .tit {
+.team-promise .txt-area ul .tit {
   padding-bottom: 30px;
   color: #2c8d6f;
   font-size: 20px;
   font-size: 24px;
   font-weight: 800;
 }
-#section .team-promise .txt-area ul li {
+.team-promise .txt-area ul li {
   margin-top: 15px;
   margin-top: 15px;
 }
-#section .team-promise .txt-area ul li:first-child {
+.team-promise .txt-area ul li:first-child {
   margin-top: 0;
 }
-
-#section .team-info {
-  height: 100%;
+.team-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#section .team-info .tit-area {
+.team-info .tit-area {
   color: #191919;
 }
-#section .team-info .tit-area .title {
+.team-info .tit-area .title {
   font-size: 24px;
   font-weight: 900;
 }
-#section .team-info .tit-area p {
+.team-info .tit-area p {
   font-size: 20px;
   font-weight: 300;
 }
-
-#section .team-info .txt-area {
+.team-info .txt-area {
   margin: 80px 0 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#section .team-info .txt-area li {
+.team-info .txt-area li {
   width: 15%;
   min-height: 400px;
   padding: 20px;
@@ -317,20 +280,20 @@ li {
   display: flex;
   flex-direction: column;
 }
-#section .team-info .txt-area li .tit {
+.team-info .txt-area li .tit {
   text-align: left;
   font-size: 24px;
   font-weight: 700;
 }
-#section .team-info .txt-area li .tit span {
+.team-info .txt-area li .tit span {
   font-size: 16px;
   font-weight: 900;
 }
-#section .team-info .txt-area li .txt {
+.team-info .txt-area li .txt {
   margin-top: 30px;
   font-weight: 400;
 }
-#section .team-info .txt-area li .img-area {
+.team-info .txt-area li .img-area {
   width: 70%;
   height: 280px;
   border-radius: 10%;
@@ -338,51 +301,45 @@ li {
   box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43);
   box-sizing: border-box;
 }
-#section .team-info .txt-area li .img-area img {
+.team-info .txt-area li .img-area img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
-#section .team-info .txt-area li a {
+.team-info .txt-area li a {
   margin-top: 30px;
   font-weight: 500;
 }
-
-#section .team-photo {
-  height: 100%;
-}
-#section .team-photo {
-  height: 100%;
+.team-photo {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#section .team-photo .tit-area {
+.team-photo .tit-area {
   color: #191919;
 }
-#section .team-photo .tit-area .title {
+.team-photo .tit-area .title {
   font-size: 24px;
   font-weight: 900;
 }
-#section .team-photo .tit-area p {
+.team-photo .tit-area p {
   font-size: 20px;
   font-weight: 300;
 }
-
-#section .team-photo .member-area {
+.team-photo .member-area {
   margin: 80px -55px 0 -55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-#section .team-photo .member-area li {
+.team-photo .member-area li {
   min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#section .team-photo .member-area li .img-area {
+.team-photo .member-area li .img-area {
   width: 70%;
   height: 280px;
   border-radius: 10%;
@@ -390,28 +347,57 @@ li {
   box-shadow: 10px 5px 30px 7px rgba(0, 0, 0, 0.43);
   box-sizing: border-box;
 }
-#section .team-photo .member-area li .img-area img {
+.team-photo .member-area li .img-area img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
-#section .team-photo .member-area li a {
+.team-photo .member-area li a {
   margin-top: 30px;
   font-weight: 500;
 }
-
-#section .members-info {
+.members-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  border-bottom: 1px dashed #000;
+  gap: 100px;
+}
+.members-info .info-area {
+  display: flex;
   height: 100%;
-}
-#section .members-info ul li .img-area {
-  width: 200px;
-  height: 200px;
-}
-#section .members-info ul li .img-area img {
   width: 100%;
-  object-fit: cover;
+  justify-content: center;
+  gap: 25%;
 }
-
+.members-info .info-area img {
+  width: 300px;
+}
+.members-info .info-area .info-container {
+  display: flex;
+}
+.members-info .info-area .intro-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 550px;
+  gap: 15px;
+}
+.members-info .info-area .intro-area .member-infolist span {
+  font-size: 20px;
+}
+.members-info .members-otherinfo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+/* .members-info .tit-area { color: #191919; }
+.members-info .tit-area .title { font-size: 24px; font-weight: 900; }
+.members-info .tit-area p { font-size: 20px; font-weight: 300; }
+.members-info ul li .img-area { width:200px; height: 200px; }
+.members-info ul li .img-area img { width:100%; object-fit: cover; }  */
+/* footer */
 #footer {
   padding: 0 120px;
   background-color: #000;
@@ -428,7 +414,6 @@ li {
   font-weight: 400;
   color: #fff;
 }
-
 #btn-top {
   cursor: pointer;
   opacity: 0;
@@ -437,8 +422,8 @@ li {
   color: #fff;
   background-color: #000;
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 20px;
+  right: 20px;
   border: 0;
   border-radius: 50%;
   font: bold 20px monospace;
@@ -447,4 +432,110 @@ li {
 #btn-top.show {
   opacity: 1;
   transition: opacity 1s, transform 1s;
+}
+/* ---------- mediaQuery ----------- */
+/* tablet */
+.tablet #header,
+.tablet #section,
+.tablet #footer {
+  padding: 0 50px;
+}
+.tablet #section > div {
+  min-height: auto;
+  padding: 100px 0;
+}
+.tablet #header .tit-area > .mbti-info {
+  margin-top: 20px;
+}
+.tablet #header .date-area,
+.tablet #footer .date-area {
+  height: 80px;
+}
+.tablet #header .date-area > *,
+.tablet #footer .date-area > * {
+  font-size: 16px;
+}
+.tablet .team-promise .info-area,
+.mobile .team-promise .info-area {
+  flex-wrap: wrap;
+}
+.tablet .team-promise .info-area .card-area,
+.mobile .team-promise .info-area .card-area {
+  width: 100%;
+}
+.tablet .team-promise .txt-area,
+.mobile .team-promise .txt-area {
+  width: 100%;
+}
+.tablet .team-photo .member-area,
+.mobile .team-photo .member-area {
+  flex-wrap: wrap;
+  margin: 80px 0 0 0;
+}
+.tablet .team-photo .member-area li,
+.mobile .team-photo .member-area li {
+  width: 50%;
+  margin-bottom: 30px;
+}
+/* mobile */
+.mobile #header,
+.mobile #section,
+.mobile #footer {
+  padding: 0 20px;
+}
+.mobile #section > div {
+  min-height: auto;
+  padding: 40px 0;
+}
+.mobile #header .date-area,
+.mobile #footer .date-area {
+  height: 50px;
+}
+.mobile #header .date-area > *,
+.mobile #footer .date-area > * {
+  font-size: 14px;
+}
+.mobile #header .tit-area {
+  background-size: 80px 80px;
+  background-position: 100% 90%;
+}
+.mobile #header .tit-area > .mbti-info {
+  margin-top: 20px;
+}
+.mobile .team-purpose .tit-area {
+  margin-top: 30px;
+}
+.mobile .team-purpose .tit-area p {
+  font-size: 16px;
+  column-count: 1;
+  column-gap: 0;
+}
+.mobile .team-promise .info-area .card-area {
+  flex-flow: wrap;
+  justify-content: space-around;
+  gap: 0;
+}
+.mobile .team-promise .info-area .card-area .card {
+  width: 40%;
+  height: 200px;
+}
+.mobile .team-promise .info-area .card-area .card .tit {
+  margin-top: 20px;
+}
+.mobile .team-promise .info-area .card-area .card i {
+  margin-top: 0;
+  font-size: 25px;
+}
+.mobile .team-promise .info-area .card-area .card .txt {
+  font-size: 15px;
+}
+.mobile .team-photo .member-area li {
+  min-height: auto;
+}
+.mobile .team-photo .member-area li .img-area {
+  width: 80%;
+  height: 150px;
+}
+.mobile .team-photo .member-area li .img-area img {
+  height: 100%;
 }
