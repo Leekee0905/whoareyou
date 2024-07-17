@@ -24,14 +24,21 @@ $("#postingbtn").click(async function () {
   const doc = {
     comments: { name: name, comment: comment },
   };
-  await addDoc(collection(db, "comments"), doc);
-  alert("저장 완료!");
-  window.location.reload();
+  if (name === "") {
+    alert("이름을 입력해주세요.");
+  } else if (comment === "") {
+    alert("댓글을 입력해주세요.");
+  } else {
+    await addDoc(collection(db, "comments"), doc);
+    alert("저장 완료!");
+    window.location.reload();
+  }
 });
 
 const docs = await getDocs(collection(db, "comments"));
 docs.forEach((data) => {
   const row = data.data().comments;
+
   const name = row["name"];
   const comment = row["comment"];
   const temp_html = `
