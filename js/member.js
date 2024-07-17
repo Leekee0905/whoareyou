@@ -31,7 +31,7 @@ const memberHTML = row.members
   .map((member, index) => {
     return `<div class="members-info" id="info${index}">
     <div class="info-area">
-      <img id="me${index}" />
+      <img class="me${index}" />
       <div class="info-container">
         <div class="intro-area">
           <div class="member-infolist "><span>이름 : ${member.name}</span></div>
