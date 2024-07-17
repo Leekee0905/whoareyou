@@ -40,7 +40,9 @@ async function getImages(imagesName, idx) {
     };
     xhr.open("GET", url);
     xhr.send();
-    const img = document.getElementById(`me${idx}`);
-    img.setAttribute("src", url);
+    $(`#me${idx}`).attr("src", url);
+
+    // const img = document.getElementById(`me${idx}`);
+    // img.setAttribute("src", url);
   });
 }
