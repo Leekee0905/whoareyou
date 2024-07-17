@@ -221,11 +221,15 @@
               type="text"
               placeholder="내용을 입력해주세요"
             />
-            <button onclick="makeComment()" type="submit">등록</button>
+            <button id="postingbtn" type="button">등록</button>
           </div>
           <div class="comment-list">
             <span>댓글 목록</span>
-            <div class="card" style="width: 18rem"></div>
+            <div
+              id="card"
+              class="card row row-cols-1 row-cols-md-4 g-4"
+              style="width: 18rem"
+            ></div>
           </div>
         </form>
       </section>
@@ -245,7 +249,7 @@
     <script src="./js/top.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/crud.js" type="module"></script>
-    <script src="./js/comment.js"></script>
+    <script src="./js/comment.js" type="module"></script>
     <script src="./js/member.js" type="module"></script>
     <!--// E : JS -->
   </body>
