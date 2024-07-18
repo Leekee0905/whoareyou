@@ -33,7 +33,14 @@ docs.forEach((data) => {
         <div class="card-body">
           <h5 class="card-title">${name}</h5>
           <p class="card-text">${comment}</p>
+          <button id="modifybtn" type="button">수정</button>
+          <button id="deletebtn" type="button">삭제</button>
         </div>
       </div>`;
   $("#card").append(temp_html);
+});
+
+$("#modifybtn").click(async function () {
+  const title = $(".card-title").text();
+  console.log(title);
 });
