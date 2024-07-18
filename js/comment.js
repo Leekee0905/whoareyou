@@ -13,9 +13,8 @@ import db from "./firebase.js";
 
 // DB 가지고 오기
 const docs = await getDocs(collection(db, "comments"));
-
 // 댓글 출력
-docs.forEach((doc, idx) => {
+docs.forEach((doc) => {
   const id = doc.id;
   const row = doc.data();
   const name = row["name"];
@@ -54,7 +53,7 @@ $("#submit").click(async function () {
   } else {
     await addDoc(collection(db, "comments"), doc);
     alert("저장 완료!");
-    window.location.reload();
+    window.location.reload(true);
   }
 });
 
@@ -65,21 +64,21 @@ $(".update").click(async function () {
   const docSnap = await getDoc(docRef);
   const commentData = docSnap.data();
   const password = commentData.password;
-
   const checkpw = prompt("패스워드 입력");
 
   if (checkpw === null) {
     return;
-  } else if (checkpw === password) {
+  }
+  if (checkpw === password) {
     const comments = prompt("수정할 내용");
     if (comments.length != 0) {
       await updateDoc(doc(db, "comments", thisValue), {
         comment: comments,
       });
       alert("수정되었습니다.");
-      window.location.reload();
+      window.location.reload(true);
     } else {
-      window.location.reload();
+      window.location.reload(true);
     }
   } else {
     alert("패스워드가 틀렸습니다");
@@ -103,7 +102,7 @@ $(".delete").click(async function () {
       await deleteDoc(doc(db, "comments", thisValue));
       alert("삭제 완료");
     }
-    window.location.reload();
+    window.location.reload(true);
   } else {
     alert("패스워드가 틀렸습니다");
   }
