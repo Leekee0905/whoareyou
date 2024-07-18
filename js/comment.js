@@ -2,20 +2,19 @@ import {
   collection,
   addDoc,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import {
   doc,
   updateDoc,
+  getDocs,
+  getDoc,
   deleteDoc,
 } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import db from "./firebase.js";
 
 // DB 가지고 오기
 const docs = await getDocs(collection(db, "comments"));
-const password = "1234";
-
 // 댓글 출력
-docs.forEach((doc, idx) => {
+docs.forEach((doc) => {
   const id = doc.id;
   const row = doc.data();
   const name = row["name"];
@@ -38,39 +37,48 @@ docs.forEach((doc, idx) => {
 $("#submit").click(async function () {
   const name = $("#name").val();
   const comment = $("#comment").val();
-
+  const password = $("#password").val();
   const doc = {
     name: name,
     comment: comment,
+    password: password,
   };
 
   if (name === "") {
     alert("이름 입력 필요");
   } else if (comment === "") {
     alert("댓글 입력 필요");
+  } else if (password === "") {
+    alert("비밀번호를 입력해주세요.");
   } else {
     await addDoc(collection(db, "comments"), doc);
     alert("저장 완료!");
-    window.location.reload();
+    window.location.reload(true);
   }
 });
 
 // 댓글 수정
 $(".update").click(async function () {
   const thisValue = $(this).val();
+  const docRef = doc(db, "comments", thisValue);
+  const docSnap = await getDoc(docRef);
+  const commentData = docSnap.data();
+  const password = commentData.password;
   const checkpw = prompt("패스워드 입력");
 
   if (checkpw === null) {
     return;
-  } else if (checkpw === password) {
+  }
+  if (checkpw === password) {
     const comments = prompt("수정할 내용");
     if (comments.length != 0) {
       await updateDoc(doc(db, "comments", thisValue), {
         comment: comments,
       });
-      window.location.reload();
+      alert("수정되었습니다.");
+      window.location.reload(true);
     } else {
-      window.location.reload();
+      window.location.reload(true);
     }
   } else {
     alert("패스워드가 틀렸습니다");
@@ -81,6 +89,10 @@ $(".update").click(async function () {
 $(".delete").click(async function () {
   const thisValue = $(this).val();
   const checkpw = prompt("패스워드 입력");
+  const docRef = doc(db, "comments", thisValue);
+  const docSnap = await getDoc(docRef);
+  const commentData = docSnap.data();
+  const password = commentData.password;
 
   if (checkpw === null) {
     return;
@@ -90,7 +102,7 @@ $(".delete").click(async function () {
       await deleteDoc(doc(db, "comments", thisValue));
       alert("삭제 완료");
     }
-    window.location.reload();
+    window.location.reload(true);
   } else {
     alert("패스워드가 틀렸습니다");
   }
