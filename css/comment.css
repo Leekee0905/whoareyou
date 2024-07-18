@@ -1,21 +1,26 @@
-.comment-title {
-  font-size: 20px;
-  margin-left: 10px;
-}
 
-.comment-text > input {
-  padding: 40px 300px;
-  margin-top: 10px;
-  font-size: 20px;
-}
+/* commets */
+.team-commets { width:100%; padding-top: 0; margin:0 auto; margin-top:150px;  display: flex; justify-content: space-between; } 
 
-.comment-text > button {
-  padding: 10px 15px;
-  margin-top: 20px;
-  background-color: black;
-  color: white;
-}
+.team-commets .form-area { width: 30%; width: 30%; display: flex; gap: 50px; flex-direction: column; justify-content: flex-start; } 
+.team-commets .form-area .tit-area { font-size: 100px; letter-spacing: -0.11em; font-weight: 700; color:#0000005a; line-height: 70px; } 
+.team-commets .form-area .tit-area span { margin-left:15px; } 
+.team-commets .form-area .tit-area i { margin-right:10px; } 
 
-.comment-list {
-  margin: 20px 0;
-}
+.team-commets .form-area .input-area { display: flex; flex-direction: column; } 
+.team-commets .form-area .input-area input[type=text],
+.team-commets .form-area .input-area textarea { width: 100%; margin:20px 0 20px 0; background-color: #FFF; border-bottom: 1px solid #000; color: #000; font-size: 1.1rem; font-weight: 400; line-height: 1.5; padding: .5rem 1rem; } 
+.team-commets .form-area .input-area textarea { height: auto; } 
+.team-commets .form-area .input-area input[type=text]:focus,
+.team-commets .form-area .input-area textarea:focus { background-color: rgba(26, 26, 26, 0.036); } 
+.team-commets .form-area .input-area .btn { margin-left: auto; margin-top:20px; background-color: #0000005a; border-radius: 6px; color: #fff; font-size: 1.1rem; font-weight: 400; letter-spacing: -0.05em; text-align: center; padding: .5rem 1rem; } 
+.team-commets .form-area .input-area .btn:hover { background-color: #000; } 
+.team-commets .card-area { width:65%; margin-right: -20px; display: flex; flex-wrap: wrap; align-content: flex-start; gap: 20px; } 
+.team-commets .card-area li { width:23%; height: 250px; min-height: 200px; padding: 20px; display: flex; flex-direction: column; justify-content: space-between; background-color: #fff; border:1px solid #000; border-radius: 8px; overflow:auto; } 
+
+.team-commets .card-area li strong { margin-bottom:20px; margin-bottom:10px; font-size: 20px; font-weight: 700; } 
+.team-commets .card-area li p { margin-bottom:20px; word-wrap: break-word; line-height: 1.5;} 
+.team-commets .card-area li .btn-area { text-align: right; } 
+.team-commets .card-area .btn { margin-left: auto; background-color: #0000005a; border-radius: 6px; color: #fff; font-size: 15px; font-weight: 400; letter-spacing: -0.05em; text-align: center; padding: .5rem 1rem; } 
+.team-commets .card-area .btn:nth-child(1) { margin-right: 8px; } 
+.team-commets .card-area .btn:hover { background-color: #000; } 

@@ -11,15 +11,13 @@ const scrollTop = function () {
   window.addEventListener("scroll", scrollBtnDisplay);
   const scrollWindow = function () {
     if (window.scrollY != 0) {
-      window.scrollBy({
-        top: wrap.getBoundingClientRect().top,
-        behavior: "smooth",
-      });
+      window.scrollBy({ top: wrap.getBoundingClientRect().top, behavior: 'smooth' });
     }
   };
   scrollBtn.addEventListener("click", scrollWindow);
 };
 scrollTop();
+
 // 반응형 대응
 const wrap = document.querySelector("#wrap");
 const mediaQueryString = "(max-width: 1040px)";
