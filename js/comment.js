@@ -97,8 +97,8 @@ $(".delete").click(async function () {
   if (checkpw === null) {
     return;
   } else if (checkpw === password) {
-    const isDel = confirm("삭제");
-    if (isDel == true) {
+    const onDelete = confirm("삭제");
+    if (onDelete == true) {
       await deleteDoc(doc(db, "comments", thisValue));
       alert("삭제 완료");
     }
