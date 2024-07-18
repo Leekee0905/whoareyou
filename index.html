@@ -8,7 +8,6 @@
     <!-- S : CSS -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/comment.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -60,11 +59,13 @@
             <p>이번 팀 과제의 목표 입니다.</p>
           </div>
 
-          <!-- <div class="img-area">
+          <!--
+          <div class="img-area">
             <div><img src="./img/1.jpg" alt="" /></div>
             <div><img src="./img/3.jpg" alt="" /></div>
             <div><img src="./img/2.jpg" alt="" /></div>
-          </div> -->
+          </div> 
+          -->
 
           <div class="purpose">
             <p>최종적인 목표 : 2024년 07월 19일 20:00시 프로젝트 완성</p>
@@ -191,40 +192,42 @@
         </div>
 
         <div class="team-commets" id="comment-box">
-          <div class="form-area">
-            <div class="tit-area">
-              COMMENTS<span class="color-green">.</span>
-            </div>
-
-            <div class="input-area">
-              <form>
-                <input
-                  id="name"
-                  type="text"
-                  class="input-text"
-                  placeholder="이름을 입력해주세요."
-                />
-                <textarea
-                  id="comment"
-                  name="comment"
-                  cols="30"
-                  rows="10"
-                  placeholder="내용을 입력해 주세요."
-                ></textarea>
-                <input
-                  id="password"
-                  type="password"
-                  class="input-text"
-                  autocomplete="on"
-                  placeholder="비밀번호를 입력해주세요."
-                />
-              </form>
-
-              <button id="submit" class="btn btn-submit">등록</button>
-            </div>
+          <div class="tit-area">
+            COMMENTS<span class="color-green">.</span>
           </div>
 
-          <ul id="list" class="card-area"></ul>
+          <div class="comment-area">
+            <div class="form-area">
+              <div class="input-area">
+                <form>
+                  <input
+                    id="name"
+                    type="text"
+                    class="input-text"
+                    placeholder="이름을 입력해주세요."
+                  />
+                  <textarea
+                    id="comment"
+                    name="comment"
+                    cols="30"
+                    rows="10"
+                    placeholder="내용을 입력해 주세요."
+                  ></textarea>
+                  <input
+                    id="password"
+                    type="password"
+                    class="input-text"
+                    autocomplete="on"
+                    placeholder="비밀번호를 입력해주세요."
+                  />
+                </form>
+
+                <button id="submit" class="btn btn-submit">등록</button>
+              </div>
+            </div>
+          
+            <ul id="list" class="card-area"></ul>
+          </div>
         </div>
       </section>
 
