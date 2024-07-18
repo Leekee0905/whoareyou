@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
 * {
   font-family: "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   letter-spacing: -0.025em;
 }
-
+html{ 
+  overflow-x: hidden;
+}
 html,
 body {
   height: 100%;
