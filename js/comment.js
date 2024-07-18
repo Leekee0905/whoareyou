@@ -13,6 +13,7 @@ import db from "./firebase.js";
 
 // DB 가지고 오기
 const docs = await getDocs(collection(db, "comments"));
+
 // 댓글 출력
 docs.forEach((doc) => {
   const id = doc.id;
@@ -45,14 +46,14 @@ $("#submit").click(async function () {
   };
 
   if (name === "") {
-    alert("이름 입력 필요");
+    alert("이름을 입력해주세요.");
   } else if (comment === "") {
-    alert("댓글 입력 필요");
+    alert("댓글을 입력해주세요.");
   } else if (password === "") {
     alert("비밀번호를 입력해주세요.");
   } else {
     await addDoc(collection(db, "comments"), doc);
-    alert("저장 완료!");
+    alert("댓글이 저장되었습니다.");
     window.location.reload(true);
   }
 });
@@ -64,13 +65,13 @@ $(".update").click(async function () {
   const docSnap = await getDoc(docRef);
   const commentData = docSnap.data();
   const password = commentData.password;
-  const checkpw = prompt("패스워드 입력");
+  const checkpw = prompt("비밀번호를 입력해 주세요.");
 
   if (checkpw === null) {
     return;
   }
   if (checkpw === password) {
-    const comments = prompt("수정할 내용");
+    const comments = prompt("수정할 내용을 작성해 주세요.");
     if (comments.length != 0) {
       await updateDoc(doc(db, "comments", thisValue), {
         comment: comments,
@@ -81,14 +82,14 @@ $(".update").click(async function () {
       window.location.reload(true);
     }
   } else {
-    alert("패스워드가 틀렸습니다");
+    alert("비밀번호가 틀렸습니다");
   }
 });
 
 // 댓글 삭제
 $(".delete").click(async function () {
   const thisValue = $(this).val();
-  const checkpw = prompt("패스워드 입력");
+  const checkpw = prompt("패스워드를 입력해 주세요.");
   const docRef = doc(db, "comments", thisValue);
   const docSnap = await getDoc(docRef);
   const commentData = docSnap.data();
@@ -97,10 +98,10 @@ $(".delete").click(async function () {
   if (checkpw === null) {
     return;
   } else if (checkpw === password) {
-    const onDelete = confirm("삭제");
+    const onDelete = confirm("정말 삭제 하시겠습니까?");
     if (onDelete == true) {
       await deleteDoc(doc(db, "comments", thisValue));
-      alert("삭제 완료");
+      alert("삭제를 완료하였습니다.");
     }
     window.location.reload(true);
   } else {
