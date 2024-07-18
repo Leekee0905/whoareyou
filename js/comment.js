@@ -67,7 +67,10 @@ $(".update").click(async function () {
   const password = commentData.password;
 
   const checkpw = prompt("패스워드 입력");
-  if (checkpw === password) {
+
+  if (checkpw === null) {
+    return;
+  } else if (checkpw === password) {
     const comments = prompt("수정할 내용");
     if (comments.length != 0) {
       await updateDoc(doc(db, "comments", thisValue), {
@@ -91,7 +94,10 @@ $(".delete").click(async function () {
   const docSnap = await getDoc(docRef);
   const commentData = docSnap.data();
   const password = commentData.password;
-  if (checkpw === password) {
+
+  if (checkpw === null) {
+    return;
+  } else if (checkpw === password) {
     const isDel = confirm("삭제");
     if (isDel == true) {
       await deleteDoc(doc(db, "comments", thisValue));
