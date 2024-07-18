@@ -59,7 +59,10 @@ $("#submit").click(async function () {
 $(".update").click(async function () {
   const thisValue = $(this).val();
   const checkpw = prompt("패스워드 입력");
-  if (checkpw === password) {
+
+  if (checkpw === null) {
+    return;
+  } else if (checkpw === password) {
     const comments = prompt("수정할 내용");
     if (comments.length != 0) {
       await updateDoc(doc(db, "comments", thisValue), {
@@ -70,7 +73,7 @@ $(".update").click(async function () {
       window.location.reload();
     }
   } else {
-      alert("패스워드가 틀렸습니다");
+    alert("패스워드가 틀렸습니다");
   }
 });
 
@@ -78,7 +81,10 @@ $(".update").click(async function () {
 $(".delete").click(async function () {
   const thisValue = $(this).val();
   const checkpw = prompt("패스워드 입력");
-  if (checkpw === password) {
+
+  if (checkpw === null) {
+    return;
+  } else if (checkpw === password) {
     const isDel = confirm("삭제");
     if (isDel == true) {
       await deleteDoc(doc(db, "comments", thisValue));
@@ -86,6 +92,6 @@ $(".delete").click(async function () {
     }
     window.location.reload();
   } else {
-      alert("패스워드가 틀렸습니다");
+    alert("패스워드가 틀렸습니다");
   }
 });
