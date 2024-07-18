@@ -19,55 +19,65 @@ function getImages(imagesName, idx) {
     $(`.me${idx}`).attr("src", url);
   });
 }
+import {
+  ref,
+  getStorage,
+  getDownloadURL,
+} from "https://www.gstatic.com/firebasejs/9.22.0/firebase-storage.js";
+
+const storage = getStorage();
+function getImages(imagesName, idx) {
+  getDownloadURL(ref(storage, `${imagesName}`)).then((url) => {
+    const xhr = new XMLHttpRequest();
+    xhr.reponseType = "blob";
+    xhr.open("GET", url);
+    xhr.send();
+    $(`.me${idx}`).attr("src", url);
+  });
+}
 
 const data = await getDocs(collection(db, "IIIII"));
 const member = [];
+const member = [];
 data.forEach((e) => {
-  const row = e.data();
-  member.push(row);
+  row = e.data();
 });
 
-member.forEach((e, idx) => {
-  getImages(e.image, idx);
-  const memberHTML = `
-  <div class="members-info" id="info${idx}">
-    <div class="info-area">
-      <div class="img-area"><img class="me${idx}" /></div>
-      <div class="info-container">
-        <div class="intro-area">
-          <div class="member-infolist"><span>이름 : </span>  ${e.name}</div>
-          <div class="member-infolist"><span>MBTI : </span> ${e.mbti}</div>
-          <div class="member-infolist"><span>TMI : </span> ${e.tmi}</div>
-          <div class="member-infolist"><span>장점 : </span> ${e.advantages}</div>
-        </div>
-        <div class="members-otherinfo">
-          <span class="blog">
-            <span class="img">
-              <img src="/img/git.png" alt="git">
-            </span>
-            <a href="${e.github}">${e.github}</a>
-          </span>
-          <span class="blog">
-            <span class="img">
-              <img src="/img/blog.png" alt="블로그링크"> 
-            </span>
-            <a href="${e.blog}">${e.blog}</a>
-          </span>
+const temp_li_HTML = row.members.map((ele, index) => {
+  return `
+  <li>
+    <div class="img-area">
+      <img class="me${index}" alt="" />
+    </div>
+    <span class="txt" onclick="goToScroll('#info${index}')"
+      >${ele.name}</span
+    >
+    <p><span class="color-green">#</span>${ele.mbti}</p>
+  </li>`;
+});
+$(".member-area").append(temp_li_HTML);
+
+const memberHTML = row.members
+  .map((member, index) => {
+    return `
+    <div class="members-info" id="info${index}">
+      <div class="info-area">
+        <img class="me${index}" />
+        <div class="info-container">
+          <div class="intro-area">
+            <div class="member-infolist "><span>이름 : ${member.name}</span></div>
+            <div class="member-infolist"><span>MBTI : ${member.mbti}</span></div>
+            <div class="member-infolist"><span>TMI : ${member.tmi}</span></div>
+            <div class="member-infolist"><span>장점 : ${member.advantages}</span></div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>`;
-  $(".members-container").append(memberHTML);
+      <div class="members-otherinfo">
+        <span>깃허브링크 : <a href="${member.github}">${member.github}</a></span>
+        <span>블로그링크 : <a href="${member.blog}">${member.blog}</a></span>
+      </div>
+    </div>`;
+  })
+  .join("");
 
-  const temp_li_HTML = `
-    <li>
-      <a href="javascript:void(0)" onclick="goToScroll('#info${idx}')">
-        <div class="img-area">
-          <img class="me${idx}" alt="" />
-        </div>
-        <span class="txt">${e.name}</span>
-        <p><span class="color-green">#</span>${e.mbti}</p>
-      </a>
-    </li>`;
-  $(".member-area").append(temp_li_HTML);
-});
+$(".members-container").append(memberHTML);
