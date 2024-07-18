@@ -169,19 +169,28 @@
             </div>
 
             <div class="input-area">
-              <input
-                id="name"
-                type="text"
-                class="input-text"
-                placeholder="이름을 입력해주세요."
-              />
-              <textarea
-                id="comment"
-                name="comment"
-                cols="30"
-                rows="10"
-                placeholder="내용을 입력해 주세요."
-              ></textarea>
+              <form>
+                <input
+                  id="name"
+                  type="text"
+                  class="input-text"
+                  placeholder="이름을 입력해주세요."
+                />
+                <textarea
+                  id="comment"
+                  name="comment"
+                  cols="30"
+                  rows="10"
+                  placeholder="내용을 입력해 주세요."
+                ></textarea>
+                <input
+                  id="password"
+                  type="password"
+                  class="input-text"
+                  autocomplete="on"
+                  placeholder="비밀번호를 입력해주세요."
+                />
+              </form>
 
               <button id="submit" class="btn btn-submit">등록</button>
             </div>
