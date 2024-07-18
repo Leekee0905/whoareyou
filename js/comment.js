@@ -35,10 +35,10 @@ docs.forEach((doc, idx) => {
 });
 
 $("#submit").click(async function () {
-  let name = $("#name").val();
-  let comment = $("#comment").val();
+  const name = $("#name").val();
+  const comment = $("#comment").val();
 
-  let doc = {
+  const doc = {
     name: name,
     comment: comment,
   };
@@ -56,8 +56,8 @@ $("#submit").click(async function () {
 
 // 댓글 수정
 $(".update").click(async function () {
-  let thisValue = $(this).val();
-  let comments = prompt("수정할 내용");
+  const thisValue = $(this).val();
+  const comments = prompt("수정할 내용");
   if (comments.length != 0) {
     await updateDoc(doc(db, "comments", thisValue), {
       comment: comments,
@@ -70,8 +70,7 @@ $(".update").click(async function () {
 
 // 댓글 삭제
 $(".delete").click(async function () {
-  let thisValue = $(this).val();
-
+  const thisValue = $(this).val();
   const isDel = confirm("삭제");
   if (isDel == true) {
     await deleteDoc(doc(db, "comments", thisValue));
