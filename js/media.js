@@ -17,6 +17,7 @@ const scrollTop = function () {
   scrollBtn.addEventListener("click", scrollWindow);
 };
 scrollTop();
+
 // 반응형 대응
 const wrap = document.querySelector("#wrap");
 const mediaQueryString = "(max-width: 1040px)";
