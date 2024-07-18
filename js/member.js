@@ -43,13 +43,13 @@ member.forEach((e, idx) => {
         <div class="members-otherinfo">
           <span class="blog">
             <span class="img">
-              <img src="/img/git.png" alt="git">
+              <img src="./img/git.png" alt="git">
             </span>
             <a href="${e.github}">${e.github}</a>
           </span>
           <span class="blog">
             <span class="img">
-              <img src="/img/blog.png" alt="블로그링크"> 
+              <img src="./img/blog.png" alt="블로그링크"> 
             </span>
             <a href="${e.blog}">${e.blog}</a>
           </span>
