@@ -16,10 +16,15 @@ function getImages(imagesName, idx) {
     xhr.reponseType = "blob";
     xhr.open("GET", url);
     xhr.send();
-    $(`.me${idx}`).attr("src", url);
+    if (imagesName === "git.png") {
+      $(`.git-image`).attr("src", url);
+    } else if (imagesName === "blog.png") {
+      $(`.blog-image`).attr("src", url);
+    } else {
+      $(`.me${idx}`).attr("src", url);
+    }
   });
 }
-
 const data = await getDocs(collection(db, "IIIII"));
 const member = [];
 data.forEach((e) => {
@@ -29,6 +34,8 @@ data.forEach((e) => {
 
 member.forEach((e, idx) => {
   getImages(e.image, idx);
+  getImages("git.png");
+  getImages("blog.png");
   const memberHTML = `
   <div class="members-info" id="info${idx}">
     <div class="info-area">
@@ -43,13 +50,13 @@ member.forEach((e, idx) => {
         <div class="members-otherinfo">
           <span class="blog">
             <span class="img">
-              <img src="/img/git.png" alt="git">
+              <img class="git-image"  alt="git">
             </span>
             <a href="${e.github}">${e.github}</a>
           </span>
           <span class="blog">
             <span class="img">
-              <img src="/img/blog.png" alt="블로그링크"> 
+              <img class="blog-image"  alt="블로그링크"> 
             </span>
             <a href="${e.blog}">${e.blog}</a>
           </span>
