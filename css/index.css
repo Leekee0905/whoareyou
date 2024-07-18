@@ -542,7 +542,7 @@ body {
   margin-top: 50px;
   margin-bottom: 100px;
 }
-.tablet #header .tit-area > h2 {
+.tablet #header .tit-area > h2, .mobile #header .tit-area > h2  {
   font-size: 9vh;
 }
 .tablet #header .tit-area > .mbti-info {
@@ -628,7 +628,10 @@ body {
 }
 .mobile #header .tit-area {
   background-size: 80px 80px;
-  background-position: 100% 90%;
+  background-position: 100% 40%;
+}
+.mobile #header .tit-area > h2  {
+  font-size: 7vh;
 }
 .mobile #header .tit-area > .mbti-info {
   margin-top: 20px;
@@ -639,7 +642,7 @@ body {
   height: 150px;
 }
 .mobile .team-purpose .purpose ul li div p.strong {
-  font-size: 20px;
+  font-size: 15px;
 }
 .mobile .team-purpose .purpose ul li div p.small {
   font-size: 14px;
@@ -698,7 +701,7 @@ body {
 }
 .mobile .team-photo .member-area li a .txt {
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 15px;
 }
 .mobile .team-photo .member-area li a > p {
   font-size: 15px;

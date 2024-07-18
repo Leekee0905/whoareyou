@@ -8,7 +8,7 @@ const scrollTop = function () {
       ? scrollBtn.classList.add("show")
       : scrollBtn.classList.remove("show");
   };
-  window.addEventListener("scroll", scrollBtnDisplay);
+  document.addEventListener("scroll", scrollBtnDisplay);
   const scrollWindow = function () {
     if (window.scrollY != 0) {
       window.scrollBy({ top: wrap.getBoundingClientRect().top, behavior: 'smooth' });
