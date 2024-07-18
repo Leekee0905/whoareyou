@@ -36,6 +36,7 @@ member.forEach((e, idx) => {
   getImages(e.image, idx);
   getImages("git.png");
   getImages("blog.png");
+  console.log("conflict");
   const memberHTML = `
   <div class="members-info" id="info${idx}">
     <div class="info-area">
