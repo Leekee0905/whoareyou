@@ -6,21 +6,15 @@
 
 ## 프로젝트 구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/e61d1ff7-71d4-4496-b21e-0fc097311b36/Untitled.png)
+![file_structure](https://github.com/user-attachments/assets/f7209baf-3b08-4c1c-bed8-f7e919ee6ff9)
+
 
 하나의 html 파일과 여러 js파일을 통해 구성된 반응형 소개 페이지입니다.
 
 ## 개발 환경
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/bf91c5e3-0347-4f7a-8cd4-eec795dcd112/Untitled.png)
+![image](https://github.com/user-attachments/assets/82d2d3c4-f204-42e4-8d04-e0700f09eb25)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/bc1c70d2-1979-4c90-a343-c0b04c255b60/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/519fb789-86e8-4bfe-9fd2-d51dd4530543/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/b5e71841-3f0d-489a-94a8-a06493ef522a/Untitled.png)
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/4d594a64-818c-4ec2-b94a-56e34de6b41c/Untitled.png)
 
 - **VSCODE**
 - **Firebase**
@@ -32,11 +26,11 @@
 
 ### 첫 화면
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/ee3fd8f2-28b4-487f-95ea-44e305c70c11/Untitled.png)
+![main](https://github.com/user-attachments/assets/377ca9ec-2e8a-4674-81f9-536deda66e78)
 
 ### 팀 목표
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/7fb3305a-4565-4b2b-b381-2ffdd56440eb/Untitled.png)
+![purpose](https://github.com/user-attachments/assets/4a129f6f-1466-480d-a3a3-42c1aa2fbc23)
 
 - 팀 목표 구역
 - 페이지 상단에서 벗어나면 나타나는 우측 하단 Top Scroll 버튼 구현
@@ -45,7 +39,7 @@
 
 ### 팀 약속
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/2055b5b4-b175-47a3-bb5d-1ba421fa0882/Untitled.png)
+![promise](https://github.com/user-attachments/assets/a1975608-d1e7-480a-b484-c7d72b455ff5)
 
 - 팀 약속 구역
 - 카드를 통해 팀 약속 표현
@@ -53,7 +47,7 @@
 
 ### 팀 소개
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/2c9bc3e8-3a55-4377-b73b-65dd51199f55/Untitled.png)
+![introduce](https://github.com/user-attachments/assets/dd871597-fa9e-4dcd-90d8-04d14613b7ab)
 
 - 현재 구역 부터는 **Firebase**를 통한 데이터 관리
 - 카드 이미지와 이름, mbti 정보를 Firebase를 사용하여 관리
@@ -63,11 +57,11 @@
 
 ### 팀원 소개
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/70f84a02-1a60-4f79-bb40-c2fbead7ce4b/Untitled.png)
+![mem1](https://github.com/user-attachments/assets/803e6b79-7972-439a-b5f8-9baf78909827)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/8d672b7c-47b8-48b6-968a-45ea334a7979/Untitled.png)
+![mem2](https://github.com/user-attachments/assets/7d1ca909-d82c-4e86-99ef-685efbefd427)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/585d9da5-c545-40ed-a4f1-ea630d499d8d/Untitled.png)
+![mem3](https://github.com/user-attachments/assets/be0413d1-a56e-4069-a7ac-f74100e7f2f0)
 
 - 각 프로필 이미지는 팀 소개와 마찬가지로 mouse-over시 컬러로 전환
 - 깃허브와 블로그 링크 이동
@@ -76,7 +70,7 @@
 
 ### 댓글 CRUD
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/d2e7cef1-2ab0-4107-a0ee-44a42d48bc4d/5c838237-cd7b-4989-8d3c-014def848b0f/Untitled.png)
+![comment](https://github.com/user-attachments/assets/a930aa63-3636-4787-9648-cdb924861b91)
 
 - Firebase를 통한 댓글 등록 및 수정 삭제 기능 구현
 - 튜터님의 조언을 통해 비밀번호로 수정 삭제 통제 ⇒ 개인적으로 암호화를 하고 싶었으나 시간 관계상 텍스트 데이터로 대체
